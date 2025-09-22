@@ -22,11 +22,22 @@ cd Maze_Chomp
 
 ### Step 2: Install Dependencies
 ```bash
+# On macOS/Linux:
+pip3 install -r requirements.txt
+
+# On Windows:
 pip install -r requirements.txt
+
+# If pip not found, try:
+python3 -m pip install -r requirements.txt
 ```
 
 ### Step 3: Run the Game
 ```bash
+# On macOS/Linux:
+python3 main.py
+
+# On Windows:
 python main.py
 ```
 
@@ -49,6 +60,11 @@ python main.py
 
 ### Test Installation Success
 ```bash
+# On macOS/Linux:
+python3 -c "import pygame; print('✅ Pygame installed:', pygame.version.ver)"
+python3 -c "import numpy; print('✅ NumPy installed:', numpy.__version__)"
+
+# On Windows:
 python -c "import pygame; print('✅ Pygame installed:', pygame.version.ver)"
 python -c "import numpy; print('✅ NumPy installed:', numpy.__version__)"
 ```
@@ -99,10 +115,20 @@ If both commands work without errors, you're ready to play!
 ## 🔧 Troubleshooting Common Issues
 
 ### ❌ "python: command not found"
-**Solution:** Install Python or try `python3` instead of `python`
+**Solution:** On macOS/Linux, use `python3` instead:
+```bash
+python3 main.py
+```
 
 ### ❌ "pip: command not found"  
-**Solution:** Try `python -m pip` or `python3 -m pip`
+**Solutions:**
+- **macOS/Linux:** Try `pip3` or `python3 -m pip`:
+```bash
+pip3 install -r requirements.txt
+# OR
+python3 -m pip install -r requirements.txt
+```
+- **Windows:** Try `python -m pip install -r requirements.txt`
 
 ### ❌ "ModuleNotFoundError: No module named 'pygame'"
 **Solution:** Install dependencies with `pip install -r requirements.txt`
@@ -115,6 +141,12 @@ If both commands work without errors, you're ready to play!
 - Make sure you're not running in SSH/terminal-only environment
 - Try running from a GUI terminal (Terminal.app, Command Prompt, etc.)
 - Check if display is available: `echo $DISPLAY` (Linux)
+
+### ❌ "destination path 'Maze_Chomp' already exists"
+**Solutions:**
+- **Use existing directory:** `cd Maze_Chomp` (if you already cloned it)
+- **Delete and re-clone:** `rm -rf Maze_Chomp` then clone again
+- **Clone to different name:** `git clone https://github.com/othei99/Maze_Chomp.git Maze_Chomp_Test`
 
 ### ❌ "fatal: repository does not exist"
 **Solution:** Make sure the GitHub URL is correct:
@@ -135,8 +167,12 @@ git clone https://github.com/othei99/Maze_Chomp.git
 ### Scenario 1: First Time Setup
 1. **Clone repository:** `git clone https://github.com/othei99/Maze_Chomp.git`
 2. **Enter directory:** `cd Maze_Chomp`  
-3. **Install dependencies:** `pip install -r requirements.txt`
-4. **Start game:** `python main.py`
+3. **Install dependencies:** 
+   - macOS/Linux: `pip3 install -r requirements.txt`
+   - Windows: `pip install -r requirements.txt`
+4. **Start game:** 
+   - macOS/Linux: `python3 main.py`
+   - Windows: `python main.py`
 5. **Verify:** Game window opens, menu appears
 
 ### Scenario 2: Basic Gameplay Test

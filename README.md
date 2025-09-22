@@ -91,26 +91,14 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## 🎮 How to Play
+## 🎮 Getting Started
 
-### 🕹️ Controls
-- **Movement**: Arrow keys or WASD
+Ready to play? Check out our comprehensive **[How to Play Guide](HOW_TO_PLAY.md)** for detailed instructions, strategies, and tips to master the game!
+
+**Quick Controls:**
+- **Movement**: Arrow keys or WASD  
 - **Pause**: SPACE
-- **Menu/Exit**: ESC
-- **Select/Continue**: ENTER
-
-### 🎯 Objective
-1. **Collect all pellets** to advance to the next level
-2. **Avoid ghosts** or you'll lose a life
-3. **Eat power-pellets** to turn ghosts blue and vulnerable
-4. **Chain ghost consumption** for maximum points
-5. **Complete all 6 levels** to win the game
-
-### 💡 Strategy Tips
-- Use power-pellets strategically when multiple ghosts are nearby
-- Learn ghost movement patterns to predict their behavior
-- Use tunnels to escape dangerous situations
-- Time your power-pellet usage for maximum ghost chains
+- **Menu**: ESC
 
 ## 🏗️ Project Structure
 
@@ -129,7 +117,9 @@ maze_chomp/
 ├── level1/
 │   └── level1.txt       # ASCII level map
 ├── requirements.txt     # Python dependencies
-└── README.md           # This file
+├── README.md           # Project overview and setup
+├── HOW_TO_PLAY.md      # Comprehensive gameplay guide
+└── TESTING_GUIDE.md    # Testing instructions
 ```
 
 ## 🧠 Code Architecture

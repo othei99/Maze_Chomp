@@ -30,7 +30,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-**That's it!** The game should start immediately.
+The game should start immediately.
 
 ## 🖥️ System Compatibility
 
@@ -130,52 +130,28 @@ git clone https://github.com/othei99/Maze_Chomp.git
 - **Professional Code**: Modular architecture, clean documentation
 - **Cross-Platform**: Works on Windows, macOS, and Linux
 
-## 🎯 Testing Scenarios
+## 🎯 Testing 
 
-### Scenario 1: First Time Setup
-1. **Clone repository:** `git clone https://github.com/othei99/Maze_Chomp.git`
-2. **Enter directory:** `cd Maze_Chomp`  
-3. **Install dependencies:** `pip install -r requirements.txt`
-4. **Start game:** `python main.py`
-5. **Verify:** Game window opens, menu appears
-
-### Scenario 2: Basic Gameplay Test
+### Scenario 1: Basic Gameplay Test
 1. **Start game:** Press ENTER at menu
 2. **Movement:** Use arrow keys to move around
 3. **Collect pellets:** Eat small dots for 10 points each
 4. **Avoid ghosts:** Don't touch colored ghosts
 5. **Verify:** Score increases, movement is smooth
 
-### Scenario 3: Power-Pellet Test  
+### Scenario 2: Power-Pellet Test  
 1. **Find power-pellet:** Large dot in maze corner
 2. **Eat power-pellet:** Walk into it
 3. **Observe:** All ghosts turn blue
 4. **Chase ghosts:** Eat blue ghosts for bonus points
 5. **Verify:** Points increase: 200→400→800→1600
 
-### Scenario 4: Complete Level Test
+### Scenario 3: Complete Level Test
 1. **Collect all pellets:** Clear entire maze
 2. **Observe:** Level complete screen appears
 3. **Continue:** Press ENTER for next level
 4. **Verify:** Level 2 starts with more ghosts
 
-## ✅ Success Criteria
-
-The game passes testing if:
-- ✅ Downloads and installs without errors
-- ✅ Game window opens correctly
-- ✅ All controls respond properly
-- ✅ Graphics display correctly
-- ✅ Sound effects play (if audio available)
-- ✅ Game mechanics work as expected
-- ✅ No crashes or error messages
-
-## 📞 Getting Help
-
-If you encounter issues:
-1. **Check this troubleshooting guide** above
-2. **Review the [HOW_TO_PLAY.md](HOW_TO_PLAY.md)** for gameplay help
-3. **Open an issue** on GitHub: https://github.com/othei99/Maze_Chomp/issues
 
 ---
 

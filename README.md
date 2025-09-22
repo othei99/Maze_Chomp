@@ -1,6 +1,6 @@
 # 🎮 Maze Chomp
 
-A complete Pac-Man-style game built with Python and Pygame. Features full game mechanics including power-pellets, ghost AI with state machines, pathfinding, and collision detection.
+A complete PacMan-style game built with Python and Pygame. Features full game mechanics including power-pellets, ghost AI with state machines, pathfinding, and collision detection.
 
 ![Game Status](https://img.shields.io/badge/Status-Playable-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.9+-blue)
@@ -64,16 +64,16 @@ python main.py
 
 ### Method 1: Quick Start (Recommended)
 ```bash
-git clone https://github.com/yourusername/maze_chomp.git
-cd maze_chomp
+git clone https://github.com/othei99/Maze_Chomp.git
+cd Maze_Chomp
 pip install -r requirements.txt
 python main.py
 ```
 
 ### Method 2: With Virtual Environment
 ```bash
-git clone https://github.com/yourusername/maze_chomp.git
-cd maze_chomp
+git clone https://github.com/othei99/Maze_Chomp.git
+cd Maze_Chomp
 
 # Create virtual environment
 python -m venv venv

@@ -6,20 +6,6 @@ A complete PacMan-style game built with Python and Pygame. Features full game me
 ![Python](https://img.shields.io/badge/Python-3.9+-blue)
 ![Pygame](https://img.shields.io/badge/Pygame-2.6+-orange)
 
-## 🚀 Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/maze_chomp.git
-cd maze_chomp
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the game
-python main.py
-```
-
 ## 🎯 Game Preview
 
 **Maze Chomp** is a fully functional Pac-Man clone featuring:
@@ -60,45 +46,6 @@ python main.py
 - **Smooth Animations**: Responsive character movement
 - **Game States**: Menu, playing, game over, victory screens
 
-## 📦 Installation
-
-### Method 1: Quick Start (Recommended)
-```bash
-git clone https://github.com/othei99/Maze_Chomp.git
-cd Maze_Chomp
-pip install -r requirements.txt
-python main.py
-```
-
-### Method 2: With Virtual Environment
-```bash
-git clone https://github.com/othei99/Maze_Chomp.git
-cd Maze_Chomp
-
-# Create virtual environment
-python -m venv venv
-
-# Activate virtual environment
-# On macOS/Linux:
-source venv/bin/activate
-# On Windows:
-# venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the game
-python main.py
-```
-
-## 🎮 Getting Started
-
-Ready to play? Check out our comprehensive **[How to Play Guide](HOW_TO_PLAY.md)** for detailed instructions, strategies, and tips to master the game!
-
-**Quick Controls:**
-- **Movement**: Arrow keys or WASD  
-- **Pause**: SPACE
-- **Menu**: ESC
 
 ## 🏗️ Project Structure
 
@@ -160,18 +107,6 @@ maze_chomp/
 - `G` = Ghost spawn point
 - ` ` = Empty space
 
-## 🚀 Future Development Ideas
-
-Potential enhancements for future versions:
-
-1. **Additional Levels**: More diverse maze layouts and challenges
-2. **Enhanced Graphics**: Sprite-based graphics instead of simple shapes
-3. **Bonus Items**: Fruits and special items for extra points
-4. **Animations**: Character movement animations and effects
-5. **Difficulty Modes**: Easy, Normal, Hard with different ghost behaviors
-6. **High Score System**: Persistent leaderboard functionality
-7. **Multiplayer Mode**: Local co-op or competitive gameplay
-8. **Custom Level Editor**: Allow users to create their own mazes
 
 ## 📋 Requirements
 
@@ -180,13 +115,6 @@ Potential enhancements for future versions:
 - **NumPy**: 1.21+
 - **Operating System**: Windows, macOS, or Linux
 
-## 🤝 Contributing
-
-This is an educational project, but contributions are welcome! Feel free to:
-- Report bugs or issues
-- Suggest new features
-- Submit pull requests
-- Improve documentation
 
 ## 📄 License
 

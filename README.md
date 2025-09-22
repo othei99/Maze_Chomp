@@ -30,24 +30,35 @@ python main.py
 - 📈 Progressive difficulty across 6 levels
 - 🏆 Complete scoring system with bonus points
 
-## Ominaisuudet
+## ✨ Features
 
-### Vaihe 1 (MVP)
-- **Ruudukkopohjainen liike**: Pelaaja liikkuu 16x16 pikselien ruudukossa
-- **Seinätörmäykset**: Ei voi liikkua seinien läpi
-- **Pisteiden syönti**: Kerää pellettejä (10 pistettä) ja power-pellettejä (50 pistettä)
-- **HUD**: Näyttää pisteet, elämät ja tason numeron
-- **Tunneli**: Liiku vasemmasta reunasta oikeaan ja päinvastoin
-- **Tason eteneminen**: Kun kaikki pelletit syöty, siirrytään seuraavaan tasoon (5% nopeampi)
+### 🎮 Core Gameplay
+- **Grid-based Movement**: Player moves on a 16x16 pixel grid system
+- **Wall Collision**: Cannot move through walls, smooth grid-snapping
+- **Pellet Collection**: Collect pellets (10 points) and power-pellets (50 points)
+- **Tunnel System**: Wrap around screen edges for strategic gameplay
+- **Progressive Levels**: 6 levels with increasing difficulty and speed
 
-### Vaihe 2 (Täydellinen pelimekaniikka)
-- **Power-pelletit**: Käynnistävät FRIGHTENED-tilan kaikille haamuille
-- **Haamujen tilakone**: SCATTER ↔ CHASE globaali ajastin, FRIGHTENED power-pelletistä, EATEN kun syöty
-- **Reitinhaku**: BFS-ruudukossa seuraava askel kohti kohdetta
-- **Törmäyslogiikka**: Pelaaja vs haamu - normaalisti kuolema, FRIGHTENED-tilassa haamu syödään
-- **HUD päivittyy**: Pisteet, elämät, taso, jäljellä olevat pelletit, nykyinen moodi
-- **Haamujen persoonat**: Blinky (jahtaa suoraan), Pinky (4 ruutua eteenpäin)
-- **Ghost-ketjupisteet**: 200→400→800→1600 ketjussa, resetoi FRIGHTENED loppuessa
+### 👻 Advanced Ghost AI
+- **Smart Ghost Behavior**: 4 unique ghost personalities
+  - **Blinky** (Red): Direct aggressive pursuit
+  - **Pinky** (Pink): Ambush tactics, targets 4 tiles ahead
+  - **Clyde** (Orange): Unpredictable switching behavior
+  - **Inky** (Cyan): Complex positioning strategy
+- **State Machine**: SCATTER ↔ CHASE ↔ FRIGHTENED ↔ EATEN
+- **Pathfinding**: BFS algorithm for optimal ghost movement
+- **Mode Scheduling**: Timed global mode switches
+
+### ⚡ Power-Pellet Mechanics
+- **Ghost Frightening**: Turn all ghosts blue and edible
+- **Chain Scoring**: 200 → 400 → 800 → 1600 points per ghost
+- **Strategic Timing**: Limited frightened duration creates tension
+
+### 🎵 Audio & Visual
+- **Sound Effects**: Pellet eating, power-pellet activation, ghost consumption
+- **Dynamic HUD**: Score, lives, level, pellets remaining, current mode
+- **Smooth Animations**: Responsive character movement
+- **Game States**: Menu, playing, game over, victory screens
 
 ## 📦 Installation
 
@@ -82,78 +93,115 @@ python main.py
 
 ## 🎮 How to Play
 
-## Ohjaimet
+### 🕹️ Controls
+- **Movement**: Arrow keys or WASD
+- **Pause**: SPACE
+- **Menu/Exit**: ESC
+- **Select/Continue**: ENTER
 
-- **Liikkuminen**: Nuolinäppäimet tai WASD
-- **Tauko**: SPACE
-- **Valikko/Poistu**: ESC
-- **Valitse/Jatka**: ENTER
+### 🎯 Objective
+1. **Collect all pellets** to advance to the next level
+2. **Avoid ghosts** or you'll lose a life
+3. **Eat power-pellets** to turn ghosts blue and vulnerable
+4. **Chain ghost consumption** for maximum points
+5. **Complete all 6 levels** to win the game
 
-## Projektirakenne
+### 💡 Strategy Tips
+- Use power-pellets strategically when multiple ghosts are nearby
+- Learn ghost movement patterns to predict their behavior
+- Use tunnels to escape dangerous situations
+- Time your power-pellet usage for maximum ghost chains
+
+## 🏗️ Project Structure
 
 ```
 maze_chomp/
-├── main.py              # Pääsilmukka ja pelin alustus
-├── constants.py         # Vakiot (värit, mitat, nopeudet)
-├── game_state.py        # Tilakone (menu, pelaaminen, game over)
-├── level.py             # Tason lataus ja hallinta
-├── player.py            # Pelaajan liike ja logiikka
-├── ghost.py             # Haamujen placeholder-AI
-├── hud.py               # Käyttöliittymän näyttö
-├── utils.py             # Apufunktiot ruudukkokäsittelyyn
+├── main.py              # Main game loop and initialization
+├── constants.py         # Game constants (colors, dimensions, speeds)
+├── game_state.py        # State machine (menu, playing, game over)
+├── level.py             # Level loading and management
+├── player.py            # Player movement and logic
+├── ghost.py             # Advanced ghost AI with personalities
+├── hud.py               # User interface display
+├── audio.py             # Sound effects management
+├── pathfinding.py       # BFS pathfinding for ghost AI
+├── utils.py             # Grid handling utilities
 ├── level1/
-│   └── level1.txt       # ASCII-kartta
-├── requirements.txt     # Python-riippuvuudet
-└── README.md           # Tämä tiedosto
+│   └── level1.txt       # ASCII level map
+├── requirements.txt     # Python dependencies
+└── README.md           # This file
 ```
 
-## Koodin rakenne
+## 🧠 Code Architecture
 
-### Moduulit
+### 🔧 Core Modules
 
-- **constants.py**: Kaikki pelin vakiot (värit, mitat, nopeudet, pisteet)
-- **utils.py**: Apufunktiot koordinaattimuunnoksiin ja vektorilaskentaan
-- **level.py**: ASCII-kartan lataus, seinätarkistukset, pellettien hallinta
-- **player.py**: Pelaajan syötteiden käsittely ja liike ruudukossa
-- **ghost.py**: Haamujen placeholder-AI ja liike (valmistelu tulevaa AI:ta varten)
-- **hud.py**: Pisteiden, elämien ja muun UI:n piirtäminen
-- **game_state.py**: Tilakone eri pelitiloille (menu, pelaaminen, game over)
-- **main.py**: Pääsilmukka, Pygame-alustus ja tapahtumien käsittely
+- **main.py**: Game loop, Pygame initialization, event handling
+- **game_state.py**: State machine for different game states (menu, playing, game over, victory)
+- **constants.py**: All game constants (colors, dimensions, speeds, scoring)
+- **utils.py**: Coordinate conversion and vector calculation utilities
 
-### Teknisiä yksityiskohtia
+### 🎮 Game Logic
 
-- **Ruudukko**: 16x16 pikselin ruudut, skaalattu 4x renderöintiin (64x64 pikseliä näytöllä)
-- **Delta-aika**: Kaikki liike käyttää delta-aikaa tasaisen pelituntuman varmistamiseksi
-- **Koordinaattijärjestelmät**: Sekä ruutukoordinaatit (logiikka) että pikselikoordinaatit (renderöinti)
-- **Suunnanvaihto**: Tapahtuu vain ruudun keskellä, snap-toiminnolla
-- **Törmäystarkistus**: Tarkistaa seuraavan ruudun ennen liikkumista
+- **level.py**: ASCII map loading, wall collision detection, pellet management
+- **player.py**: Input handling, grid-based movement with smooth interpolation
+- **ghost.py**: Advanced AI with 4 distinct personalities and state machines
+- **pathfinding.py**: BFS algorithm for optimal ghost pathfinding
 
-## Kartan merkitykset (level1/level1.txt)
+### 🎨 Presentation Layer
 
-- `#` = Seinä
-- `.` = Pelletti (10 pistettä)
-- `o` = Power-pelletti (50 pistettä)
-- `P` = Pelaajan aloituspaikka
-- `G` = Haamun aloituspaikka
-- ` ` = Tyhjä tila
+- **hud.py**: Score display, lives counter, level information, game UI
+- **audio.py**: Sound effect management and audio playback
 
-## Kehitysideoita
+### ⚙️ Technical Details
 
-Vaihe 2:n jälkeen voidaan lisätä:
+- **Grid System**: 16x16 pixel tiles, scaled 4x for rendering (64x64 pixels on screen)
+- **Delta Time**: All movement uses delta time for consistent gameplay
+- **Coordinate Systems**: Both tile coordinates (logic) and pixel coordinates (rendering)
+- **Direction Changes**: Only occur at tile centers with snap-to-grid functionality
+- **Collision Detection**: Checks next tile before movement execution
 
-1. **Lisää haamujen persoonia**: Clyde ja Inky täydellisillä AI:lla
-2. **Äänet**: Syömis-, kuolema- ja voittoäänet
-3. **Animaatiot**: Hahmojen liikkumisanimaatiot
-4. **Lisää tasoja**: Erilaisia karttoja
-5. **Bonus-pisteet**: Hedelmät ja muut bonukset
-6. **Parempi grafiikka**: Sprite-kuvat yksinkertaisten muotojen sijaan
-7. **Tasojen vaikeus**: Eri nopeudet ja haamujen käyttäytyminen
+## 🗺️ Level Map Legend (level1/level1.txt)
 
-## Vaatimukset
+- `#` = Wall
+- `.` = Pellet (10 points)
+- `o` = Power-pellet (50 points)
+- `P` = Player spawn point
+- `G` = Ghost spawn point
+- ` ` = Empty space
 
-- Python 3.11+
-- Pygame 2.6+
+## 🚀 Future Development Ideas
 
-## Lisenssi
+Potential enhancements for future versions:
 
-Tämä on harjoitusprojekti. Käytä vapaasti oppimis- ja kehitystarkoituksiin.
+1. **Additional Levels**: More diverse maze layouts and challenges
+2. **Enhanced Graphics**: Sprite-based graphics instead of simple shapes
+3. **Bonus Items**: Fruits and special items for extra points
+4. **Animations**: Character movement animations and effects
+5. **Difficulty Modes**: Easy, Normal, Hard with different ghost behaviors
+6. **High Score System**: Persistent leaderboard functionality
+7. **Multiplayer Mode**: Local co-op or competitive gameplay
+8. **Custom Level Editor**: Allow users to create their own mazes
+
+## 📋 Requirements
+
+- **Python**: 3.9+ (3.11+ recommended)
+- **Pygame**: 2.6+
+- **NumPy**: 1.21+
+- **Operating System**: Windows, macOS, or Linux
+
+## 🤝 Contributing
+
+This is an educational project, but contributions are welcome! Feel free to:
+- Report bugs or issues
+- Suggest new features
+- Submit pull requests
+- Improve documentation
+
+## 📄 License
+
+This project is created for educational purposes. Feel free to use, modify, and distribute for learning and development purposes.
+
+---
+
+**Enjoy playing Maze Chomp!** 🎮✨

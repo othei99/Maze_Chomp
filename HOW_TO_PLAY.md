@@ -14,7 +14,6 @@ Welcome to **Maze Chomp** - a complete Pac-Man experience! This guide will help 
 - Movement is **grid-based** - you move one tile at a time
 - Direction changes only happen at **tile centers**
 - You can **queue** your next direction by pressing the key early
-- Use **tunnels** on the sides to wrap around the screen
 
 ## 🎯 Game Objective
 
@@ -76,42 +75,18 @@ Welcome to **Maze Chomp** - a complete Pac-Man experience! This guide will help 
 #### 🎯 Chase Mode  
 - Ghosts actively **hunt the player**
 - Each ghost uses its **unique personality**
-- **More dangerous** - stay alert!
 
 #### 😨 Frightened Mode (Blue Ghosts)
 - Triggered by **eating power-pellets**
 - Ghosts become **vulnerable and edible**
 - Move **slower and randomly**
-- **Limited duration** - act fast!
+- **Limited duration** 
 
 #### 💀 Eaten Mode
 - Ghost returns to **spawn point**
 - **Temporarily harmless**
 - Will **respawn** after reaching home
 
-## 💡 Advanced Strategy Tips
-
-### Pellet Collection
-- **Plan your route** to avoid getting trapped
-- **Clear safe areas first** when ghosts are in scatter mode
-- **Save difficult pellets** for when you have power-pellets nearby
-
-### Power-Pellet Timing
-- **Count ghosts** before using - more ghosts = more points
-- **Position yourself** near multiple ghosts before eating
-- **Chain ghost consumption** quickly for maximum score multiplier
-
-### Survival Tactics
-- **Use tunnels** to escape dangerous situations
-- **Learn ghost patterns** - they're predictable in chase mode
-- **Stay near power-pellets** when surrounded
-- **Corner cutting** - ghosts can't cut corners as sharply as you
-
-### High Score Strategies
-- **Perfect power-pellet usage** - always eat 4 ghosts per power-pellet
-- **Efficient routing** - minimize backtracking
-- **Risk management** - know when to retreat vs. push forward
-- **Mode timing** - use scatter mode for risky pellet collection
 
 ## 🎮 Game Progression
 
@@ -132,39 +107,6 @@ Welcome to **Maze Chomp** - a complete Pac-Man experience! This guide will help 
 - **Complete Victory**: Finish all 6 levels
 - **Perfect Game**: Complete all levels without losing a life
 
-## 🏆 Mastery Goals
-
-### Beginner Goals
-- [ ] Complete Level 1
-- [ ] Eat your first frightened ghost
-- [ ] Use all 4 power-pellets in one level
-
-### Intermediate Goals  
-- [ ] Complete 3 levels in one game
-- [ ] Achieve a 4-ghost chain (200→400→800→1600)
-- [ ] Score over 10,000 points
-
-### Expert Goals
-- [ ] Complete all 6 levels
-- [ ] Perfect power-pellet usage (4 ghosts per power-pellet)
-- [ ] Score over 50,000 points
-- [ ] Complete the game without losing a life
-
-## 🎯 Quick Reference
-
-### Emergency Situations
-- **Cornered by multiple ghosts**: Head for nearest power-pellet
-- **Power-pellet running out**: Finish eating current ghost, then retreat
-- **Low on pellets**: Use remaining power-pellets strategically
-- **Last life**: Play more conservatively, avoid risky moves
-
-### Optimal Play Pattern
-1. **Scatter mode**: Collect safe pellets, position near power-pellets
-2. **Chase mode**: Use power-pellets, eat ghosts, collect risky pellets  
-3. **Frightened mode**: Maximize ghost consumption, clear dangerous areas
-4. **Repeat** until level complete
-
----
 
 **Good luck, and enjoy playing Maze Chomp!** 🎮✨
 
